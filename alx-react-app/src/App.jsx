@@ -12,10 +12,10 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <MainContent/>
+      <Header />
+      <MainContent />
       <WelcomeMessage />
-      <Footer/>
+      <Footer />
     </>
   )
 }
