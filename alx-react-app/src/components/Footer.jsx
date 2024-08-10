@@ -1,5 +1,5 @@
 export default function Footer(){
-  return <footer>
+  return (<footer>
     <p>&copy; 2023 City Lovers</p>
-  </footer>;
+  </footer>);
 }
