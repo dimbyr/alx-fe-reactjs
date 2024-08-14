@@ -8,7 +8,7 @@ import ProfilePage from './components/ProfilePage';
 import UserContext from './components/UserContext';
 
 function App() {
-  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+  const userData = {name: "Jane Doe", email: "jane.doe@example.com",  age: 29, bio: "Awesome guy"};
 
   return (
     <>
@@ -16,9 +16,8 @@ function App() {
       <MainContent />
       <UserContext.Provider  value={userData}>
         <ProfilePage />
+        <UserProfile />
       </UserContext.Provider>
-      <UserProfile name ="John" age = {17} bio = "Awesome guy!"/>
-      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <Footer />
     </>
   );
