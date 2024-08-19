@@ -5,7 +5,7 @@ function Navbar(){
   return (
     <div>
       <nav>
-        <ul style={{listStyle: 'none', display: 'flex', justifyContent:'center', gap: '50px', width:'300px', position: 'fixed'}}>
+        <ul style={{listStyle: 'none', display: 'flex', justifyContent:'flex-start', gap: '50px', width:'300px', backgroundColor: 'pink'}}>
           <li>
             <Link to='/'>Home</Link>
           </li>
