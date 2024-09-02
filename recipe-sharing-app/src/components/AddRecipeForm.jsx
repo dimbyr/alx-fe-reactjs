@@ -14,20 +14,25 @@ import { useState } from 'react';
     };
 
     return (
-      <form className="flex justify-center items-center h-screen"
+      <form className="flex-col justify-center items-center h-auto"
       onSubmit={handleSubmit}>
-        <input
+        <input required className="p-2 mr-1 w-60 border rounded-md border-gray-600"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Title"
         />
-        <textarea className="p-2 mr-2 w-60 border rounded-md border-gray-300"
+        <br />
+        <textarea required className="p-2 mr-2 w-60 border rounded-md border-gray-600"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Description"
         />
-        <button type="submit">Add Recipe</button>
+        <div>
+          <button className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md"
+        type="submit">Add Recipe
+        </button>
+        </div>
       </form>
     );
   };
