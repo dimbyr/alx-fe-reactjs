@@ -4,7 +4,6 @@ import { useRecipeStore } from './recipeStore';
     const recipe = useRecipeStore(state =>
       state.recipes.find(recipe => recipe.id === recipeId)
     );
-
     return (
       <div>
         <h1>{recipe.title}</h1>
