@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
+import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.recipes);
@@ -42,6 +43,11 @@ const RecipeList = () => {
           {editingRecipeId === recipe.id && (
             <EditRecipeForm recipe={recipe} onClose = {()=> setEditingRecipeId(null)} />
           )}
+           <Link to={`/recipes/${recipe.id}`}>
+            <button className="px-2 py-1 bg-green-500 text-white font-semibold rounded-md">
+              View Details
+            </button>
+          </Link>
         </li>
       ))}
     </ul>
