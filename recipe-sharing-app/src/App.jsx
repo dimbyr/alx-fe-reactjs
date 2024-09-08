@@ -1,6 +1,8 @@
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -29,6 +31,8 @@ const App = () => {
               <Route path="/add-recipe" element={<AddRecipeForm />} />
               <Route path="/recipe/:id" element={<RecipeDetails />} />
             </Routes>
+            <FavoritesList />
+            <RecommendationsList />
           </div>
         </div>
       </div>
