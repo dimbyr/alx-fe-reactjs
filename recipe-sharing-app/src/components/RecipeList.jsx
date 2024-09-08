@@ -3,6 +3,7 @@ import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
 import RecipeDetails from './RecipeDetails';
 import DeleteRecipeButton from './DeleteRecipeButton';
+import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
@@ -41,18 +42,19 @@ const RecipeList = () => {
             <EditRecipeForm recipe={recipe} onClose = {()=> setEditingRecipeId(null)} />
           )}
 
-          {/* <Link to={`/recipes/${recipe.id}`}>
+          <Link to={`/recipes/${recipe.id}`}>
             <button
               className="px-2 py-1 bg-green-500 text-white font-semibold rounded-md"
             >
               View Details
             </button>
-          </Link> */}
+          </Link>
 
           {/* Render RecipeDetails within the Link target, passing recipe ID as a prop */}
           <Link to={`/recipes/${recipe.id}`}>
             <RecipeDetails recipeId={recipe.id} /> {/* Pass recipe ID */}
           </Link>
+          <SearchBar />
         </li>
       ))}
     </ul>
