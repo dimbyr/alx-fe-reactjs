@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
-import RecipeDetails from './recipeDetails';
+import RecipeDetails from './RecipeDetails';
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
