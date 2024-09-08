@@ -26,7 +26,8 @@ const RecipeList = () => {
         <li key={recipe.id}>
           <h3 className='font-bold text-2xl'>{recipe.title}</h3>
           <p>{recipe.description}</p>
-          <DeleteRecipeButton handleDelete = {() => handleDelete(recipe.id)}/>
+          <RecipeDetails />
+          <DeleteRecipeButton recipeId = {recipe.id}/>
 
           <button
             className="px-2 py-1 bg-blue-500 text-white font-semibold rounded-md"
@@ -40,13 +41,13 @@ const RecipeList = () => {
             <EditRecipeForm recipe={recipe} onClose = {()=> setEditingRecipeId(null)} />
           )}
 
-          <Link to={`/recipes/${recipe.id}`}>
+          {/* <Link to={`/recipes/${recipe.id}`}>
             <button
               className="px-2 py-1 bg-green-500 text-white font-semibold rounded-md"
             >
               View Details
             </button>
-          </Link>
+          </Link> */}
 
           {/* Render RecipeDetails within the Link target, passing recipe ID as a prop */}
           <Link to={`/recipes/${recipe.id}`}>
