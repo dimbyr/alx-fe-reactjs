@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
 import RecipeDetails from './RecipeDetails';
+import DeleteRecipeButton from './DeleteRecipeButton';
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
@@ -25,13 +26,7 @@ const RecipeList = () => {
         <li key={recipe.id}>
           <h3 className='font-bold text-2xl'>{recipe.title}</h3>
           <p>{recipe.description}</p>
-
-          <button
-            className="px-2 py-1 bg-red-500 text-white font-semibold rounded-md"
-            onClick={() => handleDelete(recipe.id)}
-          >
-            Delete
-          </button>
+          <DeleteRecipeButton handleDelete = {() => handleDelete(recipe.id)}/>
 
           <button
             className="px-2 py-1 bg-blue-500 text-white font-semibold rounded-md"
