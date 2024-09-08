@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
+import RecipeDetails from './recipeDetails';
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.recipes);
   const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
-  
+
   // State to track which recipe is being edited
   const [editingRecipeId, setEditingRecipeId] = useState(null);
 
@@ -24,7 +25,7 @@ const RecipeList = () => {
         <li key={recipe.id}>
           <h3 className='font-bold text-2xl'>{recipe.title}</h3>
           <p>{recipe.description}</p>
-          
+
           <button
             className="px-2 py-1 bg-red-500 text-white font-semibold rounded-md"
             onClick={() => handleDelete(recipe.id)}
@@ -43,10 +44,18 @@ const RecipeList = () => {
           {editingRecipeId === recipe.id && (
             <EditRecipeForm recipe={recipe} onClose = {()=> setEditingRecipeId(null)} />
           )}
-           <Link to={`/recipes/${recipe.id}`}>
-            <button className="px-2 py-1 bg-green-500 text-white font-semibold rounded-md">
+
+          <Link to={`/recipes/${recipe.id}`}>
+            <button
+              className="px-2 py-1 bg-green-500 text-white font-semibold rounded-md"
+            >
               View Details
             </button>
+          </Link>
+
+          {/* Render RecipeDetails within the Link target, passing recipe ID as a prop */}
+          <Link to={`/recipes/${recipe.id}`}>
+            <RecipeDetails recipeId={recipe.id} /> {/* Pass recipe ID */}
           </Link>
         </li>
       ))}
