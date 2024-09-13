@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from 'react';
 import './App.css';
 import HomePage from './components/HomePage';
@@ -11,7 +12,7 @@ function App() {
       try {
         const response = await fetch('data.json');
         const data = await response.json();
-        setRecipeData(JSON.parse(data));
+        setRecipeData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
