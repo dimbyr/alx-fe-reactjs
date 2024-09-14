@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import recipeData from "../data.json";
+import RecipeDetail from './RecipeDetail';
+
 
 function HomePage(){
   const [recipe, setRecipe] = useState([]);
@@ -18,6 +20,7 @@ function HomePage(){
  />
           <h2  className="text-xl font-semibold mb-2">{item.title}</h2>
           <p>{item.summary}</p>
+          <RecipeDetail recipe = {recipe} id = {item.id} />
         </div>
       ))}
     </div>
