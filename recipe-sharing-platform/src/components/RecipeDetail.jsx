@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function RecipeDetail(props){
-  const [selectedRecipe, setSelectedRecipe] = useState('')
+  const { id } = useParams();
+  const [selectedRecipe, setSelectedRecipe] = useState('');
   useEffect(() => {
     const recipe = props.recipe.find((rcp) => rcp.id === props.id); // Use find instead of filter
     setSelectedRecipe(recipe);
