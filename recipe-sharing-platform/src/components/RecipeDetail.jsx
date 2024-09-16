@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useRecipeStore from '../stores/recipeStore'; // Import Zustand store
 
 function RecipeDetail() {
+  const path = "data.json";
   const { id } = useParams();
   const { recipeData, loading, error, fetchRecipes } = useRecipeStore();
 
