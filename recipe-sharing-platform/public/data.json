@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["200g spaghetti", "100g ground beef", "1 onion", "2 cloves garlic", "400g tomatoes"],
+    "instructions": "Cook the spaghetti. Meanwhile, cook the beef with onions and garlic, add tomatoes, and simmer."
+  },
+
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/150",
+     "ingredients": ["200g spaghetti", "100g ground beef", "1 onion", "2 cloves garlic", "400g tomatoes"],
+    "instructions": "Cook the spaghetti. Meanwhile, cook the beef with onions and garlic, add tomatoes, and simmer."
+  },
+  
+    {
+      "id": 3,
+      "title": "Beef Stroganoff",
+      "summary": "A creamy Russian beef dish with mushrooms and onions, served over noodles or rice.",
+      "image": "https://www.simplyrecipes.com/thmb/AyYVG8cdKVVSOhnnScg_oJ7i5ak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Beef-Stroganoff-LEAD-2-9e5e5c00178b4b7a8dcbd82038c92be1.jpg",
+      "ingredients": [
+        "400g beef strips",
+        "200g mushrooms",
+        "1 onion",
+        "2 cloves garlic",
+        "200ml sour cream",
+        "1 tbsp mustard"
+      ],
+      "instructions": "Sauté onions and garlic in butter. Add beef strips and brown them. Add mushrooms, cook until soft. Stir in mustard and sour cream, simmer for a few minutes. Serve over rice or noodles."
+    },
+    {
+      "id": 4,
+      "title": "Margherita Pizza",
+      "summary": "Classic Italian pizza topped with tomatoes, mozzarella, and fresh basil.",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2021/04/Margherita-Pizza-008.jpg",
+      "ingredients": [
+        "1 pizza dough",
+        "100g mozzarella cheese",
+        "2 tomatoes",
+        "Fresh basil leaves",
+        "Olive oil",
+        "Salt and pepper"
+      ],
+      "instructions": "Roll out pizza dough and spread a layer of tomato slices. Top with mozzarella and fresh basil leaves. Drizzle olive oil and season with salt and pepper. Bake at 220°C (425°F) until crust is golden."
+    },
+    {
+      "id": 5,
+      "title": "Vegetarian Chili",
+      "summary": "A hearty vegetarian chili packed with beans, vegetables, and spices.",
+      "image": "https://cookieandkate.com/images/2021/10/vegetarian-chili-recipe-3-768x1154.jpg",
+      "ingredients": [
+        "400g kidney beans",
+        "1 onion",
+        "1 bell pepper",
+        "2 cloves garlic",
+        "400g tomatoes",
+        "1 tbsp chili powder",
+        "1 tsp cumin"
+      ],
+      "instructions": "Sauté onions, garlic, and bell pepper. Add tomatoes, kidney beans, and spices. Simmer for 30 minutes. Serve with sour cream and shredded cheese, if desired."
+    },
+    {
+      "id": 6,
+      "title": "Pad Thai",
+      "summary": "Thai stir-fried noodles with tofu, peanuts, and a tangy tamarind sauce.",
+      "image": "https://www.feastingathome.com/wp-content/uploads/2018/10/Pad-Thai-Recipe-104.jpg",
+      "ingredients": [
+        "200g rice noodles",
+        "100g tofu",
+        "50g peanuts",
+        "2 eggs",
+        "2 tbsp fish sauce",
+        "1 tbsp tamarind paste",
+        "1 lime"
+      ],
+      "instructions": "Cook noodles according to package instructions. Stir-fry tofu, then add garlic and eggs. Mix in noodles, tamarind sauce, and fish sauce. Garnish with peanuts and serve with lime wedges."
+    },
+    {
+      "id": 7,
+      "title": "Lemon Garlic Salmon",
+      "summary": "Baked salmon with a flavorful lemon garlic butter sauce.",
+      "image": "https://www.wholesomeyum.com/wp-content/uploads/2016/05/wholesomeyum-baked-lemon-garlic-butter-salmon-5.jpg",
+      "ingredients": [
+        "2 salmon fillets",
+        "2 cloves garlic",
+        "1 lemon",
+        "2 tbsp butter",
+        "Fresh parsley",
+        "Salt and pepper"
+      ],
+      "instructions": "Preheat oven to 200°C (400°F). Place salmon on a baking tray. Mix melted butter, lemon juice, and minced garlic, then pour over the salmon. Bake for 15-20 minutes. Garnish with fresh parsley."
+    }
+  
+]
