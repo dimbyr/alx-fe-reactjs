@@ -1,15 +1,56 @@
+import { useState } from "react";
+
 function RegistrationForm(){
+  const [ name, setName ] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
+  const [ error, setError ] = useState({});
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = {}
+    if (name.trim() === ''){
+      errors.name = "Name cannot be empty"
+    }
+    if (email.trim() === ''){
+      errors.email = "Email address cannot be empty"
+    }
+    if (password.trim().length < 3){
+      errors.password = "Password must be more than 3 characters"
+    }
+    setError(errors);
+    if(error > 0){
+      console.log(Object.values(error));
+      return;
+    }
+  }
   return (
     <>
-    <form action="">
+    <form action="POST" onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
-      <input type="text" name="name" id="name" />
+      <input type="text" 
+              name="name" 
+              id="name" 
+              value={name} 
+              onChange={(e)=> setName(e.target.value)} 
+              />
       <br />
       <label htmlFor="email">Email address</label>
-      <input type="email" name='email' id="email" />
+      <input type="email" 
+              name='email' 
+              id="email" 
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
+              />
       <br />
       <label htmlFor="password">Password</label>
-      <input type="password" name="password" id="password" />
+      <input type="password" 
+              name="password" 
+              id="password" 
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)}
+              />
+      <br />
+      <button type="submit">Submit</button>
     </form>
     </>
   )
