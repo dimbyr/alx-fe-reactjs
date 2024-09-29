@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 function RegistrationForm(){
-  const [ name, setName ] = useState('');
+  const [ username, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
   const [ error, setError ] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = {}
-    if (name.trim() === ''){
+    if (username.trim() === ''){
       errors.name = "Name cannot be empty"
     }
     if (email.trim() === ''){
@@ -30,7 +30,7 @@ function RegistrationForm(){
       <input type="text" 
               name="name" 
               id="name" 
-              value={name} 
+              value={username} 
               onChange={(e)=> setName(e.target.value)} 
               />
       <br />
