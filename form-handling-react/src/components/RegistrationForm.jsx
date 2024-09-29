@@ -8,13 +8,13 @@ function RegistrationForm(){
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = {}
-    if (username.trim() === ''){
+    if (!username){
       errors.name = "Name cannot be empty"
     }
-    if (email.trim() === ''){
+    if (!email){
       errors.email = "Email address cannot be empty"
     }
-    if (password.trim().length < 3){
+    if (!password){
       errors.password = "Password must be more than 3 characters"
     }
     setError(errors);

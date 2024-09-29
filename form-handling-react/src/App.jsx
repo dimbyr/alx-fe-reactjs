@@ -6,6 +6,7 @@ function App() {
   return(
     <div>
       <RegistrationForm />
+      <div>USing FORMIK</div>
       <FormikForm />
     </div>
 
