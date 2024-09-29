@@ -17,10 +17,13 @@ const FormikForm = () => (
   >
       {() => (
           <Form>
+            <label htmlFor="name"> Name </label>
               <Field type="text" name="name" />
               <ErrorMessage name="name" component="div" />
+              <label htmlFor="email">Email</label>
               <Field type="email" name="email" />
               <ErrorMessage name="email" component="div" />
+              <label htmlFor="password">Password</label>
               <Field type="password" name="password" />
               <ErrorMessage name='password' component= "div" />
               <button type="submit">Submit</button>
