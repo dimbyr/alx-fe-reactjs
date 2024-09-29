@@ -4,7 +4,7 @@ function RegistrationForm(){
   const [ username, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
-  const [ error, setError ] = useState({});
+  const [ error, setErrors ] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = {}
@@ -17,7 +17,7 @@ function RegistrationForm(){
     if (!password){
       errors.password = "Password must be more than 3 characters"
     }
-    setError(errors);
+    setErrors(errors);
     if(error > 0){
       console.log(Object.values(error));
       return;
