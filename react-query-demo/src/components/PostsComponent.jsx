@@ -8,7 +8,7 @@ const fetchPosts = async () => {
 
 const PostsComponent  = () => {
     // Use the useQuery hook to handle data fetching and caching
-    const { data, isError, isLoading } = useQuery('fetchData', fetchPosts);
+    const { data, isError, isLoading, refetch } = useQuery('fetchData', fetchPosts, { staletime: 5000, refetchOnWindowFocus: false, keepPreviousData: true });
     // Handle loading state
     if (isLoading) return <div>Loading...</div>;
     // Handle error state
@@ -17,9 +17,11 @@ const PostsComponent  = () => {
     // Render the fetched data
     return (
         <div>
+            <h1>Posts</h1>
+            <button onClick={refetch}>Refetch Posts</button>
             {data.map(item => (
                 <div key={item.id}>
-                  <h1>{item.title}</h1>
+                  <h2>{item.title}</h2>
                   <p>{item.body}</p>
                 </div>
             ))}
